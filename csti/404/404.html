@@ -1,0 +1,279 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<link rel="icon" href="src/logo2.ico" type="image/x-icon" />
+<title>csti 404</title>
+<!-- Meta tag Keywords -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8" />
+<meta name="keywords" content="" />
+<!-- <style>   二维码弹窗样式
+	.qrcode-popup {
+		display: none;
+		position: absolute;
+		top: 70%;
+		left: 20%;
+		padding: 10px;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+		z-index: 999;
+	}
+	.qrcode-popup img{
+		border-radius: 5px;
+		width: 100px;
+		height: 100px;
+	}
+</style> -->
+<script>
+	addEventListener("load", function () {
+		setTimeout(hideURLbar, 0);
+	}, false);
+
+	function hideURLbar() {
+		window.scrollTo(0, 1);
+	}
+</script>
+<!-- //Meta tag Keywords -->
+<!--/Style-CSS -->
+<link rel="stylesheet" href="css/style_404.css" type="text/css" media="all" />
+<!--//Style-CSS -->
+<!-- font-awesome-icons -->
+<link href="css/font-awesome.css" rel="stylesheet">
+<!-- //font-awesome-icons -->
+      <style>
+        .ip-display {
+            position: fixed;
+            top: 35px; 
+            right: 10px;
+            font-size: 10px;
+            color: white; 
+            z-index: 9999; 
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            fetch('https://api.ipify.org/')
+                .then(response => response.text())
+                .then(data => {
+                    let ipDiv = document.createElement('div');
+                    ipDiv.className = 'ip-display'; // 添加CSS类名
+                    ipDiv.textContent = '您的IP: ' + data;
+                    document.body.appendChild(ipDiv);
+                })
+                .catch(error => console.error('无法获取IP地址:', error));
+        };
+    </script>
+</head>
+
+<body>
+<section class="w3l-error-61-404">
+	<!-- /error-61-section -->
+	<div class="error-61-mian">
+		<div class="wrapper">
+			<div class="errors-16-top">
+				<div class="errors-16-info">
+					<h3> 404 </h3>
+					<p>sorry! 页面找不到了~</p>
+					<a href="../index.html"><u><font color=	#B0C4DE>解决方法...</font></u></a>
+					<a style="color:#000000;" href="../index.html" class="d-flex error-page-form">
+						<font style="color:#ffffff;font-size:21px;font-weight:bold;">&nbsp;&nbsp;≧◉◡◉≦&nbsp;&nbsp;亲爱的不要急，来随便逛逛吧：</font>
+						<button type="" ><span class="fa fa-film" aria-hidden="true">&nbsp;csti</span></button>
+						</a>
+					<div class="social-coming-icons">
+						<a href="../index.html" title="csti" class="footer-home"><span class="fa fa-home"
+								aria-hidden="true"></span></a>
+						<a href="#" title="QQ" class="footer-qq"><span class="fa fa-qq"
+								aria-hidden="true"></span></a>
+
+								<a href="#" title="微信" class="footer-wx"><span class="fa fa-weixin"
+									aria-hidden="true"></span></a>
+
+						<a href="#" title="微博" class="footer-wb"><span class="fa fa-weibo"
+								aria-hidden="true"></span></a>
+					</div>
+				
+				</div>
+
+			</div>
+			<div class="copyright-footer">
+				<div class="copy-right">
+					<p>Copyright &copy;2024 <a href="../index.html" target="_blank" title="404">csti.</a> All rights reserved.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<!-- //error-61-section -->
+<audio autoplay="autoplay" src="../index.html" onended="this.load();"></audio>
+</body>
+<style>
+    #top-time-display {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      /* 可以取消注释下面一行以添加半透明背景 */
+   color: rgb(255, 255, 255);
+      padding: 5px;
+      border-radius: 3px;
+      font-size: 14px;
+      z-index: 99999;
+    }
+</style>
+<script>
+    (function displayTopTime() {
+       const currentTimeElement = document.createElement('div');
+       currentTimeElement.id = 'top-time-display';
+ 
+       // 添加点击事件监听器
+       currentTimeElement.addEventListener('click', function() {
+          window.location.href = "../shijian/index.html"; // 替换为你要跳转的页面URL
+       });
+ 
+       function updateTime() {
+          const now = new Date();
+          let hours = now.getHours();
+          let minutes = now.getMinutes();
+          let seconds = now.getSeconds();
+ 
+          // 获取星期并格式化
+          let daysOfWeek = ['日', '一', '二', '三', '四', '五', '六'];
+          let dayOfWeek = daysOfWeek[now.getDay()];
+ 
+          // 格式化时间输出
+          hours = ("0" + hours).slice(-2);
+          minutes = ("0" + minutes).slice(-2);
+          seconds = ("0" + seconds).slice(-2);
+ 
+          // 将日期和时间合并在一起显示，星期在右边，且时间与星期之间空一格
+          currentTimeElement.textContent = `${hours}:${minutes}:${seconds} ${dayOfWeek}`;
+ 
+          setTimeout(updateTime, 1000);
+       }
+ 
+       updateTime();
+       document.body.appendChild(currentTimeElement);
+    })();
+ </script>
+
+<!---->
+
+
+<script>
+//屏蔽右键菜单 
+document.oncontextmenu = function(event) {
+if (window.event) {
+event = window.event;
+}
+
+try {
+var the = event.srcElement;
+if (!((the.tagName == "INPUT" && the.type.toLowerCase() == "text") || the.tagName == "TEXTAREA")) {
+return false;
+}
+return true;
+} catch (e) {
+return false;
+}
+}
+
+//屏蔽粘贴 
+document.onpaste = function(event) { 
+if (window.event) {
+event = window.event;
+}
+try {
+var the = event.srcElement;
+if (!((the.tagName == "INPUT" && the.type.toLowerCase() == "text") || the.tagName == "TEXTAREA")) {
+return false;
+}
+return true; 
+} catch (e) {
+return false;
+}
+}
+
+//屏蔽复制
+document.oncopy = function(event) {
+if (window.event) {
+event = window.event;
+}
+try {
+var the = event.srcElement;
+if (!((the.tagName == "INPUT" && the.type.toLowerCase() == "text") || the.tagName == "TEXTAREA")) {
+return false;
+}
+return true;
+} catch (e) {
+return false;
+}
+}
+
+//屏蔽剪切
+document.oncut = function(event) {
+if (window.event) { 
+event = window.event;
+}
+try {
+var the = event.srcElement;
+if (!((the.tagName == "INPUT" && the.type.toLowerCase() == "text") || the.tagName == "TEXTAREA")) {
+return false;
+}
+return true;
+} catch (e) {
+return false;
+}
+}
+
+//屏蔽选中
+document.onselectstart = function(event) {
+if (window.event) {
+event = window.event;
+}
+try {
+var the = event.srcElement;
+if (!((the.tagName == "INPUT" && the.type.toLowerCase() == "text") || the.tagName == "TEXTAREA")) {
+return false;
+}
+return true;
+} catch (e) {
+return false;
+}
+}
+</script>
+<script type="text/Javascript">
+function inlobase_noF12(){while(1){}}
+function inlojv_console(){if((window.console&&(console.firebug||console.table&&/firebug/i.test(console.table())))||(typeof opera=="object"&&typeof opera.postError=="function"&&console.profile.length>0)){inlobase_noF12()}if(typeof console.profiles=="object"&&console.profiles.length>0){inlobase_noF12()}}inlojv_console();window.onresize=function(){if((window.outerHeight-window.innerHeight)>200){inlobase_noF12()}};
+</script>
+
+
+<script>
+    // //按键触发
+    document.onkeydown = function () {
+ 
+      // 禁止 F12按键的使用 
+      if (window.event && window.event.keyCode == 123) {
+        event.keyCode = 0;
+        event.returnValue = false;
+      }
+ 
+      // 禁止f12按键的使用      同上面那个一样
+      if (window.event.key == 'F12' ) {
+        window.event.returnValue = false;
+        return false;
+      }
+    }
+  </script>
+
+
+
+<script>
+    document.addEventListener('keydown', function(event) {
+  event.preventDefault(); // 阻止键盘事件的默认行为
+});
+    
+</script>
+
+
+</html>

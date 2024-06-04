@@ -1,0 +1,160 @@
+.global_login_bg,
+.global_register_bg,
+.global_forget_bg {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 1000;
+}
+
+.global_login_container,
+.global_register_container,
+.global_forget_container {
+    width: 600px;
+    height: 350px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    border-radius: 10px;
+    padding: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.global_register_container {
+    height: 450px;
+}
+
+.global_forget_container {
+    height: 380px;
+}
+
+.global_login_container h3,
+.global_register_container h3,
+.global_forget_container h3 {
+    margin-top: 35px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 22px;
+}
+
+.global_login_container input,
+.global_register_container input,
+.global_forget_info input {
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    color: #333;
+    padding: 12px 14px;
+    border-radius: 4px;
+    margin: 15px auto;
+    box-sizing: border-box;
+    border: 1px solid #e5e5e5;
+    outline: none;
+}
+
+.global_login_container input:focus,
+.global_register_container input:focus {
+    box-shadow: 0 0 10px 0 rgba(36, 36, 36, 0.1);
+}
+
+.global_login_info,
+.global_register_info,
+.global_forget_info {
+    width: 90%;
+    margin: 25px auto 0px;
+}
+
+.global_login_bg .global_login_container .global_login_info .global_roll_login,
+.global_register_bg .global_register_container .global_register_info .global_roll_register,
+.global_forget_bg .global_forget_container .global_forget_info .global_roll_forget {
+    width: 100%;
+    margin: 10px auto 0;
+    display: block;
+    text-align: center;
+    font-size: 16px;
+    color: white;
+    padding: 14px;
+    box-sizing: border-box;
+    background-color: #1e9fff;
+    border-radius: 10px;
+    opacity: .8;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.global_login_container .global_forget_psw {
+    display: inline-block;
+    font-size: 14px;
+    color: #666;
+    margin-top: 15px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.global_roll_get_code,
+.global_forget_roll_get_code {
+    font-size: 14px;
+    position: absolute;
+    top: 220px;
+    right: 40px;
+    padding-left: 14px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 14px;
+    color: #1e9fff;
+    border-radius: 16px;
+    border: 1px solid #1e9fff;
+    text-decoration: none;
+}
+
+.global_forget_roll_get_code {
+    top: 155px;
+}
+
+.global_forget_roll_get_code:hover,
+.global_roll_get_code:hover {
+    text-decoration: none;
+    color: #1e9fff;
+    opacity: 0.9;
+}
+
+.global_login_container .global_register,
+.global_register_container .global_login,
+.global_forget_container .global_forget_login {
+    opacity: 0.8;
+    margin-top: 15px;
+    display: inline-block;
+    font-size: 14px;
+    color: #1e9fff;
+    float: right;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.global_forget_container .global_forget_login {
+    margin-top: 10px;
+}
+
+.global_login_bg .global_login_container .global_login_info .global_roll_login:hover,
+.global_register_bg .global_register_container .global_register_info .global_roll_register:hover {
+    opacity: 1;
+}
+
+.global_login_bg .global_login_container .global_roll_login_close,
+.global_register_bg .global_register_container .global_roll_register_close,
+.global_forget_bg .global_forget_container .global_roll_forget_close {
+    padding: 14px;
+    top: 25px;
+    right: 25px;
+    position: absolute;
+    cursor: pointer;
+    text-decoration: none;
+}

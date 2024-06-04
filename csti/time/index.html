@@ -1,0 +1,190 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="clock"></div>
+    <script src="index.js"></script>
+    
+    <script>
+        setTimeout(function() {
+    window.location.href = "../index.html"; // 这里"/"代表你的首页URL
+}, 12000); // 10000毫秒即10秒
+    </script>
+    
+<style>
+    #top-time-display {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      /* 可以取消注释下面一行以添加半透明背景 */
+      /* background-color: rgba(255, 255, 255, 0.8); */
+      color: cyan;
+      padding: 5px;
+      border-radius: 3px;
+      font-size: 14px;
+      z-index: 99999;
+    }
+</style>
+<script>
+    (function displayTopTime() {
+       const currentTimeElement = document.createElement('div');
+       currentTimeElement.id = 'top-time-display';
+ 
+       // 添加点击事件监听器
+       currentTimeElement.addEventListener('click', function() {
+          window.location.href = "index.html"; // 替换为你要跳转的页面URL
+       });
+ 
+       function updateTime() {
+          const now = new Date();
+          let hours = now.getHours();
+          let minutes = now.getMinutes();
+          let seconds = now.getSeconds();
+ 
+          // 获取星期并格式化
+          let daysOfWeek = ['日', '一', '二', '三', '四', '五', '六'];
+          let dayOfWeek = daysOfWeek[now.getDay()];
+ 
+          // 格式化时间输出
+          hours = ("0" + hours).slice(-2);
+          minutes = ("0" + minutes).slice(-2);
+          seconds = ("0" + seconds).slice(-2);
+ 
+          // 将日期和时间合并在一起显示，星期在右边，且时间与星期之间空一格
+          currentTimeElement.textContent = `${hours}:${minutes}:${seconds} ${dayOfWeek}`;
+ 
+          setTimeout(updateTime, 1000);
+       }
+ 
+       updateTime();
+       document.body.appendChild(currentTimeElement);
+    })();
+ </script>
+</body>
+
+
+<!---->
+
+
+<script>
+//屏蔽右键菜单 
+document.oncontextmenu = function(event) {
+if (window.event) {
+event = window.event;
+}
+
+try {
+var the = event.srcElement;
+if (!((the.tagName == "INPUT" && the.type.toLowerCase() == "text") || the.tagName == "TEXTAREA")) {
+return false;
+}
+return true;
+} catch (e) {
+return false;
+}
+}
+
+//屏蔽粘贴 
+document.onpaste = function(event) { 
+if (window.event) {
+event = window.event;
+}
+try {
+var the = event.srcElement;
+if (!((the.tagName == "INPUT" && the.type.toLowerCase() == "text") || the.tagName == "TEXTAREA")) {
+return false;
+}
+return true; 
+} catch (e) {
+return false;
+}
+}
+
+//屏蔽复制
+document.oncopy = function(event) {
+if (window.event) {
+event = window.event;
+}
+try {
+var the = event.srcElement;
+if (!((the.tagName == "INPUT" && the.type.toLowerCase() == "text") || the.tagName == "TEXTAREA")) {
+return false;
+}
+return true;
+} catch (e) {
+return false;
+}
+}
+
+//屏蔽剪切
+document.oncut = function(event) {
+if (window.event) { 
+event = window.event;
+}
+try {
+var the = event.srcElement;
+if (!((the.tagName == "INPUT" && the.type.toLowerCase() == "text") || the.tagName == "TEXTAREA")) {
+return false;
+}
+return true;
+} catch (e) {
+return false;
+}
+}
+
+//屏蔽选中
+document.onselectstart = function(event) {
+if (window.event) {
+event = window.event;
+}
+try {
+var the = event.srcElement;
+if (!((the.tagName == "INPUT" && the.type.toLowerCase() == "text") || the.tagName == "TEXTAREA")) {
+return false;
+}
+return true;
+} catch (e) {
+return false;
+}
+}
+</script>
+<script type="text/Javascript">
+function inlobase_noF12(){while(1){}}
+function inlojv_console(){if((window.console&&(console.firebug||console.table&&/firebug/i.test(console.table())))||(typeof opera=="object"&&typeof opera.postError=="function"&&console.profile.length>0)){inlobase_noF12()}if(typeof console.profiles=="object"&&console.profiles.length>0){inlobase_noF12()}}inlojv_console();window.onresize=function(){if((window.outerHeight-window.innerHeight)>200){inlobase_noF12()}};
+</script>
+
+
+<script>
+    // //按键触发
+    document.onkeydown = function () {
+ 
+      // 禁止 F12按键的使用 
+      if (window.event && window.event.keyCode == 123) {
+        event.keyCode = 0;
+        event.returnValue = false;
+      }
+ 
+      // 禁止f12按键的使用      同上面那个一样
+      if (window.event.key == 'F12' ) {
+        window.event.returnValue = false;
+        return false;
+      }
+    }
+  </script>
+
+
+
+<script>
+    document.addEventListener('keydown', function(event) {
+  event.preventDefault(); // 阻止键盘事件的默认行为
+});
+    
+</script>
+
+</html>

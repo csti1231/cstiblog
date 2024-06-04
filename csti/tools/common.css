@@ -1,0 +1,248 @@
+@media screen and (min-width: 1422px) {
+    /*  //>=1280的设备  */
+    .roll_container {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 1422px) {
+    /* <=1422px */
+    .roll_container {
+        width: 1280px;
+    }
+}
+
+body {
+    font-family: pingfang SC, helvetica neue, arial, hiragino sans gb, microsoft yahei ui, microsoft yahei, simsun, sans-serif!important;
+    background-color: rgba(244, 244, 244);
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.clearfix:after {
+    content: ".";
+    width: 0;
+    height: 0;
+    visibility: hidden;
+    display: block;
+    clear: both;
+    overflow: hidden;
+}
+
+
+/* 居中容器 */
+
+.roll_container {
+    margin: 0 auto;
+    position: relative;
+}
+
+.roll_header {
+    height: 70px;
+    background-color: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .2);
+}
+
+.header_logo {
+    padding: 0;
+    margin: 0;
+    float: left;
+    height: 70px;
+    line-height: 70px;
+    font-size: 35px;
+}
+
+.header_logo a {
+    color: #1e9fff;
+    font-weight: 900;
+    text-decoration: none;
+    transition: all .5s;
+    -ms-transition: all .5s;
+    display: block;
+    /* IE 9 */
+    -moz-transition: all .5s;
+    /* Firefox */
+    -webkit-transition: all .5s;
+    /* Safari 和 Chrome */
+    -o-transition: all .5s;
+    /* Opera */
+}
+
+.header_logo a:hover {
+    transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    /* IE 9 */
+    -moz-transform: scale(1.2);
+    /* Firefox */
+    -webkit-transform: scale(1.2);
+    /* Safari 和 Chrome */
+    -o-transform: scale(1.2);
+    /* Opera */
+}
+
+.header_tab {
+    float: left;
+}
+
+.roll_header li .home_tab_select {
+    color: rgba(73, 160, 248, .8);
+    text-shadow: .5px 0px 0px rgba(73, 160, 248, .1);
+}
+
+.header_tab li {
+    float: left;
+}
+
+.roll_header li a {
+    height: 70px;
+    line-height: 70px;
+    text-decoration: none;
+    display: block;
+    color: #666;
+    font-size: 15px;
+    padding: 0 20px;
+    text-shadow: .5px 0px 0px #fcfcfc;
+}
+
+.header_tips {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.roll_header li a:hover {
+    color: rgba(73, 160, 248, .8);
+    text-shadow: .5px 0px 0px rgba(73, 160, 248, .1);
+}
+
+.login_container {
+    float: right;
+    position: relative;
+}
+
+.login_container span {
+    height: 70px;
+    line-height: 70px;
+    cursor: pointer;
+    color: #666;
+    font-size: 15px;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+.login_container span:first-child {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+#icon_search {
+    opacity: 0;
+}
+
+#icon_search:hover,
+#icon_regist:hover,
+#icon_login:hover {
+    /* opacity: 0.8; */
+}
+
+.avatar_container {
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.avatar_container img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    vertical-align: middle;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.avatar_container:hover+.avatar_info_container {
+    display: block;
+}
+
+.avatar_info_container>ul {
+    background-color: white;
+    box-shadow: 0 0 10px 0 rgba(36, 36, 36, 0.1);
+}
+
+.avatar_info_container {
+    position: absolute;
+    top: 0px;
+    padding-top: 70px;
+    right: -35px;
+    z-index: 1000;
+    display: none;
+}
+
+.avatar_info_container:hover {
+    display: block;
+}
+
+.avatar_info_container ul,
+.avatar_info_container li {
+    padding: 0;
+    margin: 0;
+}
+
+.avatar_info_container ul li a {
+    display: block;
+    width: 110px;
+    height: 40px;
+    line-height: 40px;
+}
+
+.roll_footer {
+    margin-top: 50px;
+    width: 100%;
+    background-color: #000000;
+    height: 60px;
+}
+
+.roll_footer p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 13px;
+    text-align: center;
+}
+.roll_footer p:hover {
+    color: rgb(0, 153, 255);
+    font-size: 13px;
+    text-align: center;
+}
+.roll_footer p span:hover {
+    color:cyan;
+    font-size: 13px;
+    text-align: center;
+}
+
+.roll_footer_link {
+    color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+}
+
+.roll_footer_link a {
+    margin-top: 20px;
+    color: rgba(255, 255, 255, 0.7);
+    display: inline-block;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.header_tips {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.roll_container .header_tips a {
+    font-size: 14px;
+    color: #666;
+    position: relative;
+}
+
+.header_tips a:hover {
+    opacity: 0.8;
+}

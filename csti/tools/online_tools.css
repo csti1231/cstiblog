@@ -1,0 +1,141 @@
+.tools {
+    margin-right: -10px;
+    min-height: 650px;
+}
+
+.tools ul {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    margin-top: 10px;
+    display: flex;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+}
+
+.tools li {
+    float: left;
+    height: 170px;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    width: 20%;
+    cursor: pointer;
+}
+
+.tools li:hover {
+    opacity: 0.8;
+}
+.tools li div {
+    width: 70%;
+    background-color: white;
+    border-radius: 4px;
+    height:80%;
+    border: 1px solid #ccc;
+    position: relative;
+    padding-right: 15px;
+}
+
+.tools li div img {
+    width: 48px;
+    height: 48px;
+    display: block;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+
+.tools li div h3 {
+    margin: 0;
+    margin-left: 68px;
+    margin-top: 18px;
+    font-weight: 400;
+    padding-right: 15px;
+    color: #333;
+    font-size: 18px;
+    padding: 0;
+}
+
+.tools .tools_tips {
+    font-size: 12px;
+    color: #666;
+    margin-left: 68px;
+    display: inline-block;
+    padding-top: 8px;
+    color: cadetblue;
+}
+
+.tools .tools_info {
+    font-size: 13px;
+    color: #444;
+    position: absolute;
+    top: 75px;
+    padding-top: 15px;
+    border-top: 1px solid #ddd;
+    left: 15px;
+    right: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.tools_link {
+    color: #999;
+    max-width: 200px;
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.tools_go {
+    display: inline-block;
+    text-decoration: none;
+    position: absolute;
+    color: #333;
+    font-size: 13px;
+    right: 18px;
+    top: 46px;
+}
+
+.tools_copy {
+    display: inline-block;
+    text-decoration: none;
+    position: absolute;
+    color: #333;
+    font-size: 12px;
+    right: 15px;
+    bottom: 15px;
+}
+
+.header_tips {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.roll_container .header_tips a:first-of-type {
+    font-size: 14px;
+    color: #666;
+}
+
+.roll_container .header_tips a:nth-of-type(2) {
+    font-size: 14px;
+    color: #666;
+}
+
+.header_tips a:hover {
+    opacity: 0.8;
+}
+
+.no_end {
+    padding: 20px;
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+}

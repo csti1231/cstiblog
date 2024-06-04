@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link rel="stylesheet" href="115.css">
+	<title>csti</title>
+</head>
+
+<style>
+  .ip-display {
+      position: fixed;
+      top: 15px; 
+      right: 10px;
+      font-size: 10px;
+      color: rgb(0, 0, 0); 
+      z-index: 9999; 
+  }
+</style>
+
+<script>
+  window.onload = function() {
+      fetch('https://api.ipify.org/')
+          .then(response => response.text())
+          .then(data => {
+              let ipDiv = document.createElement('div');
+              ipDiv.className = 'ip-display'; // 添加CSS类名
+              ipDiv.textContent = '您的IP: ' + data;
+              document.body.appendChild(ipDiv);
+          })
+          .catch(error => console.error('无法获取IP地址:', error));
+  };
+</script>
+
+<body>
+
+    <div class="container">
+      <div id="top-time-display"></div>
+        <div class="panda">
+            <div class="ear left"></div>
+            <div class="ear right"></div>
+            <div class="face">
+                <div class="eye-shadow left"></div>
+                <div class="eye-white left">
+                    <div class="eye-ball"></div>
+                </div>
+                <div class="eye-shadow right"></div>
+                <div class="eye-white right">
+                    <div class="eye-ball"></div>
+                </div>
+                <div class="nose"></div>
+                <div class="mouth"></div>
+            </div>
+            <div class="body"></div>
+            <div class="foot left">
+                <div class="sole"></div>
+            </div>
+            <div class="foot right">
+                <div class="sole"></div>
+            </div>
+        </div>
+        <div class="login-box">
+            <div class="hand left"></div>
+            <div class="hand right"></div>
+            <h1>用户登录</h1>
+            <div class="ipt-box">
+                <input type="text" required>
+                <label>用户名</label>
+            </div>
+            <div class="ipt-box">
+                <input type="password" id="password" required>
+                <label>密码</label>
+            </div>
+            <button id="login-btn">登录</button>
+        </div>
+    </div>
+
+    <script src="login-validation.js"></script>
+    <script src="/js/jquery-3.6.0.min.js"></script>
+    <script src="115.js"></script>
+</body>
+</html>
+
+
+<script>
+    // 定义正确的账户凭证
+const validAccount = {
+  username: 'csti',
+  password: '0000'
+};
+
+// 最大允许尝试次数
+const maxAttempts = 3;
+
+// 当前尝试次数
+let currentAttempt = 0;
+
+document.getElementById('login-btn').addEventListener('click', function() {
+  const usernameInput = document.querySelector('input[type="text"]');
+  const passwordInput = document.getElementById('password');
+
+  const enteredUsername = usernameInput.value;
+  const enteredPassword = passwordInput.value;
+
+  if (
+    enteredUsername === validAccount.username &&
+    enteredPassword === validAccount.password
+  ) {
+    // 登录成功，跳转至 dier.html
+    window.location.href = '../ruanjian/index.html';
+  } else {
+    // 登录失败
+    currentAttempt++;
+
+    const remainingAttempts = maxAttempts - currentAttempt;
+    const errorMessage = `第 ${currentAttempt} 次登录不正确，还剩 ${remainingAttempts} 次输入机会`;
+
+    alert(errorMessage);
+
+    if (currentAttempt >= maxAttempts) {
+      // 输入三次不正确后，自动返回 index.html
+      window.location.href = '../index.html';
+    }
+  }
+});
+
+
+
+
+
+document.getElementById('password').addEventListener('keyup', function(event) {
+  if (event.keyCode === 13) {
+    document.getElementById('login-btn').click(); // 触发登录按钮的点击事件
+  }
+});
+</script>
+
+
+<script src="./live2dw/lib/L2Dwidget.min.js"></script>
+<script>
+    function readTextFile(file, callback) {
+        var rawFile = new XMLHttpRequest();
+        rawFile.overrideMimeType("application/json");
+        rawFile.open("GET", file, true);
+        rawFile.onreadystatechange = function () {
+            if (rawFile.readyState === 4 && rawFile.status == "200") {
+                callback(rawFile.responseText);
+            }
+        }
+        rawFile.send(null);
+    }
+    var jsonData = null;
+    readTextFile("./live2dw/live2d-widget-model-shizuku/assets/shizuku.model.json", function (text) {
+        jsonData = JSON.parse(text);
+    })
+    
+    L2Dwidget.init({
+        model: {
+            // 模型
+            jsonPath: jsonData, //"./live2dw/live2d-widget-model-shizuku/assets/shizuku.model.json",
+            scale: 1 //模型缩放比例
+        },
+        display: {
+            position: "center", //模型的位置（左or右）
+            width: 150, //模型宽度
+            height: 300, //模型高度
+            hOffset: 0, //模型水平偏移量
+            vOffset: -20 //模型垂直偏移量
+        },
+        mobile: {
+            show: true, //手机端是否显示
+            scale: 1 //缩放比例
+        },
+        react: {
+            opacity: 1 //模型不透明度
+        }
+    })
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    //屏蔽右键菜单 
+    document.oncontextmenu = function(event) {
+    if (window.event) {
+    event = window.event;
+    }
+    
+    try {
+    var the = event.srcElement;
+    if (!((the.tagName == "INPUT" && the.type.toLowerCase() == "text") || the.tagName == "TEXTAREA")) {
+    return false;
+    }
+    return true;
+    } catch (e) {
+    return false;
+    }
+    }
+    
+    //屏蔽粘贴 
+    document.onpaste = function(event) { 
+    if (window.event) {
+    event = window.event;
+    }
+    try {
+    var the = event.srcElement;
+    if (!((the.tagName == "INPUT" && the.type.toLowerCase() == "text") || the.tagName == "TEXTAREA")) {
+    return false;
+    }
+    return true; 
+    } catch (e) {
+    return false;
+    }
+    }
+    
+    //屏蔽复制
+    document.oncopy = function(event) {
+    if (window.event) {
+    event = window.event;
+    }
+    try {
+    var the = event.srcElement;
+    if (!((the.tagName == "INPUT" && the.type.toLowerCase() == "text") || the.tagName == "TEXTAREA")) {
+    return false;
+    }
+    return true;
+    } catch (e) {
+    return false;
+    }
+    }
+    
+    //屏蔽剪切
+    document.oncut = function(event) {
+    if (window.event) { 
+    event = window.event;
+    }
+    try {
+    var the = event.srcElement;
+    if (!((the.tagName == "INPUT" && the.type.toLowerCase() == "text") || the.tagName == "TEXTAREA")) {
+    return false;
+    }
+    return true;
+    } catch (e) {
+    return false;
+    }
+    }
+    
+    //屏蔽选中
+    document.onselectstart = function(event) {
+    if (window.event) {
+    event = window.event;
+    }
+    try {
+    var the = event.srcElement;
+    if (!((the.tagName == "INPUT" && the.type.toLowerCase() == "text") || the.tagName == "TEXTAREA")) {
+    return false;
+    }
+    return true;
+    } catch (e) {
+    return false;
+    }
+    }
+    </script>
+    <script type="text/Javascript">
+    function inlobase_noF12(){while(1){}}
+    function inlojv_console(){if((window.console&&(console.firebug||console.table&&/firebug/i.test(console.table())))||(typeof opera=="object"&&typeof opera.postError=="function"&&console.profile.length>0)){inlobase_noF12()}if(typeof console.profiles=="object"&&console.profiles.length>0){inlobase_noF12()}}inlojv_console();window.onresize=function(){if((window.outerHeight-window.innerHeight)>200){inlobase_noF12()}};
+    </script>
+    
+    
+    <script>
+        // //按键触发
+        document.onkeydown = function () {
+     
+          // 禁止 F12按键的使用 
+          if (window.event && window.event.keyCode == 123) {
+            event.keyCode = 0;
+            event.returnValue = false;
+          }
+     
+          // 禁止f12按键的使用      同上面那个一样
+          if (window.event.key == 'F12' ) {
+            window.event.returnValue = false;
+            return false;
+          }
+        }
+      </script>
+    
+    
+<!--     
+    <script>
+        document.addEventListener('keydown', function(event) {
+      event.preventDefault(); // 阻止键盘事件的默认行为
+    });
+        
+    </script> -->
+    
+    
+    <script>
+        function refreshAtMidnight() {
+      // 获取当前时间
+      var now = new Date();
+    
+      // 检查是否到达凌晨12点（小时数为0且分钟和秒数为0）
+      if (now.getHours() === 0 && now.getMinutes() === 0 && now.getSeconds() === 0) {
+        // 刷新页面
+        location.reload(true);
+      }
+    }
+    
+    // 每分钟检查一次是否到达凌晨12点
+    setInterval(refreshAtMidnight, 60000); // 时间间隔设置为1分钟（60000毫秒）
+    
+    // 立即执行一次以防止错过刚过去的12点
+    refreshAtMidnight();
+    </script>
+    
+    
+
+

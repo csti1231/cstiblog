@@ -1,0 +1,371 @@
+/* 
+
+
+                 ********              *******           ************           *******      
+              ************           ***     ***       ***   ***   ***            ***         
+            ****        ****         ***      **             ***                  ***                
+           ****                      ******                  ***                  ***      
+           ****                        ******                ***                  ***      
+           ****                            ****              ***                  ***      
+            ****        ****          **      ***            ***                  ***               
+              ************            ***     ***            ***                  ***           
+                 ********               *******             *****               *******         
+
+
+                  */
+
+@import "https://fonts.googleapis.com/css?family=Raleway:100,300,600";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.subpage {
+    padding-top: 44px;
+}
+
+.subpage #header {
+    background: #5385c1;
+    top: 0;
+    height: 44px;
+    line-height: 44px;
+    position: fixed;
+}
+
+#header {
+    color: #d4e0ef;
+    cursor: default;
+    height: 3.25em;
+ margin-left: 300px;
+    line-height: 3.25em;
+    position: absolute;
+    text-align: right;
+    top: 4em;
+    width: 1310px;
+    z-index: 10001;
+}
+
+#header .inner {
+    margin: 0 auto;
+    position: relative;
+}
+
+#header .logo {
+    color: #ffffff;
+    display: inline-block;
+    font-weight: 600;
+    height: inherit;
+    left: 0;
+    line-height: inherit;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    font-size: 1em;
+}
+
+#header a {
+    display: inline-block;
+    padding: 0 0.75em;
+    color: inherit;
+    text-decoration: none;
+    font-size: 11px;
+}
+
+#header a:hover {
+    color: #ffffff;
+}
+
+#header a:last-child {
+    padding-right: 0;
+}
+
+
+
+
+
+
+
+a{
+    text-decoration: none;
+}
+
+.dadiv111{
+    width: 1900px;
+    margin: 0 auto;
+    padding: 12em 0 12em 0;
+    background-image: url(http://demo.mobanwang.com/mb/lo202305/202305093/html/images/banner.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    text-align: center;
+
+}
+.banner{
+    height: 100px;
+padding-top: 150px;
+}
+.banner_div{
+margin-top: -100px;
+
+}
+.banner h1 {
+    font-size: 3.5em;
+    font-weight: 100;
+    font-family: "Raleway", Arial, Helvetica, sans-serif;
+    color: #fff;
+    line-height: 1em;
+
+    padding: 0;
+}
+
+.banner p {
+    margin-top: 20px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.55);
+}
+
+
+
+
+
+
+                    /* 第一 */
+.diyi_div {
+    font-family: "宋体";
+    /* text-align: center; */
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 110px;
+    background-color: white;
+    width: 100%;
+    height: 400px;
+}
+.diyi_div_kuan{
+    width: 1400px;
+    display: flex;
+    flex-wrap: wrap;  
+}
+.diyi_div_1 {
+
+    height: 400px;
+    width: 33%;
+    /* background-color: #5385c1; */
+}
+.diyi_div_1yi {
+    margin-top: 85px;
+    height: 240px;
+    /* background-color: rgb(104, 88, 88); */
+}
+.diyi_div_1yi h3{
+    color: #5385c1;
+    /* background-color: #ffffff; */
+}
+.diyi_div_1yi p{
+color: #b1b1b1;
+}
+
+.diyi_div_1yi_anniu{
+    line-height: 2.95em;
+margin-top: 98px;
+    margin-left: 40px;
+width: 86px;height: 45px;
+background-color: #5385c1;
+}
+.diyi_div_1yi_anniu a{
+font-size: 20px;
+    text-align: center;
+    color: white;
+}
+.diyi_div_2 {
+    height: 400px;
+    width: 33.3%;
+    /* background-color: #53c170; */
+}
+.diyi_div_1er {
+    border-left: 1px solid #e4e4e4;
+    border-right: 1px solid #e4e4e4;
+}
+
+.diyi_div_3 {
+    height: 400px;
+    width: 33%;
+    /* background-color: #c153b2; */
+}
+
+
+
+                    /* 第二  */
+
+.dier_div{
+    width: 100%;
+    height: 860px;
+    background-color: #5385c1;
+}
+.dier_div_1{
+
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+.dier_div_1 h2{
+padding-top: 150px;
+    font-size: 45px;
+    font-weight: 100;
+    font-family: "Raleway", Arial, Helvetica, sans-serif;
+    
+}
+.dier_div_1 p{
+    line-height: 30px;
+    font-size: 12px;
+opacity: 0.9;
+    font-family: "Raleway", Arial, Helvetica, sans-serif;   
+}
+.dier_div_img h3{
+    font-family: "Raleway", Arial, Helvetica, sans-serif;   
+    color: white;
+    font-weight: 500;
+}
+.dier_div_img p{
+    font-family: "Raleway", Arial, Helvetica, sans-serif;   
+    color: white;
+    /* font-weight: 200; */
+    opacity: 0.5;
+}
+.dier_div_img{
+
+    width: 1900px;
+padding-top: 140px;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+.dier_div_img img{
+    margin-top: 40px;
+    border-radius: 50%;
+}
+
+.dier_div2{
+    width: 265px;
+    height: 333px;
+    border: solid rgb(255, 255, 255,0.4) 1px;
+}
+.dier_div3{
+    margin-left: 80px;
+    width: 265px;
+    height: 333px;
+    border: solid rgb(255, 255, 255,0.4) 1px;
+}
+.dier_div4{
+    margin-left: 80px;
+    width: 265px;
+    height: 333px;
+    border: solid rgb(255, 255, 255,0.4) 1px;
+}
+.dier_div5{
+    margin-left: 80px;
+    width: 265px;
+    height: 333px;
+    border: solid rgb(255, 255, 255,0.4) 1px;
+}
+
+
+                    /* 第三 */
+.disan_div{
+    width: 100%;
+    height: 1000px;
+    background-color: #ffffff;
+
+
+}
+.disan_div_1{
+    width: 100%;
+    text-align: center;
+}
+.disan_div_1 h2{
+    color: #5385c1;
+    padding-top: 150px;
+        font-size: 45px;
+        font-weight: 100;
+        font-family: "Raleway", Arial, Helvetica, sans-serif;
+        
+    }
+    .disan_div_1 p{
+        color: #bbb;
+        line-height: 30px;
+        font-size: 12px;
+    opacity: 0.9;
+        font-family: "Raleway", Arial, Helvetica, sans-serif;   
+    }
+.disan_div_img{
+    width: 1900px;
+padding-top: 140px;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+.disan_div_img h3{
+    line-height: 100px;
+    font-family: "Raleway", Arial, Helvetica, sans-serif;   
+    color: #5385c1;
+    font-weight: 500;
+}
+.disan_div_img p{
+    font-family: "Raleway", Arial, Helvetica, sans-serif;   
+    color: #9a9a9a;
+    /* font-weight: 200; */
+    /* opacity: 0.5; */
+}
+
+.disan_div_img1{
+width: 550px;
+height: 400px;
+
+}
+.disan_div_img2{
+    margin-left: 100px;
+    width: 550px;
+    height: 400px; 
+
+}
+.div_doder{
+    margin-left: 349PX;
+    margin-top: 180px;
+width: 1226px;
+border-bottom: 1px solid #dbdbdb;
+}
+
+                     /* 第四 */
+.disi_div{
+    position: absolute;
+ background-color:#ffffff;
+ width: 1900px;
+ height: 200px;
+ text-align: center;
+  color: #bbb;
+  font-size: 0.8em;
+  margin: 0 0 2em 0;
+  padding: 0;
+}
+.disi_div1{
+    margin-top: 150px;
+}
+.disi_div1 a{
+    color: black;
+    font-weight: 600;
+    text-decoration: none;
+
+}
+
+
+
+
+
+
+
+
+
+
+
