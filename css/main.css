@@ -1,94 +1,108 @@
-@import url(https://cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css);
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300italic,600italic,300,600");
+@import URL(https://cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css);
+@import URL("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300italic,600italic,300,600");
 /*
-	Dimension by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+维度(按HTML5UP)
+html5up.net|@ajlkn
+根据CCA3.0许可证(html5up.net/license)，个人和商业用途免费
 */
-/* Reset */
-	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-		margin: 0;
-		padding: 0;
-		border: 0;
-		font-size: 100%;
-		font: inherit;
-		vertical-align: baseline;
+/*复位*/
+HTML，body，div，span，applet，对象，iframe，h1，h2，h3，h4，h5，h6，p，blockquote，pre，a，abbr，首字母缩写词，地址，big，引用，代码，del，dfn，em，img，ins，kbd，q，s，samp，small，strike，strong，sub，sup，tt，var，b，u，i，center，dl，dt，DD，ol，ul，li，字段集，表单，标签，图例，表格，标题，tbody，tfoot，thead，tr，th，td，article，side，canvas，details，embed，figtion，figaption，footer，header，hgroup，菜单，nav，output，ruby，section，summary，time，mark，audio，video{
+		边缘:0;
+		填充:0;
+		边境:0;
+		字体大小:100%;
+		字体:继承;
+		垂直对齐:基准;
 	}
-	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-		display: block;
+文章、旁注、细节、插图、图形、页脚、页眉、hgroup、菜单、导航、节{
+		显示:块;
 	}
-	body {
-		line-height: 1;
+身体{
+		线高:1;
 	}
-	ol, ul {
-		list-style: none;
+ol，ul{
+		列表式:没有一个;
 	}
-	blockquote, q {
-		quotes: none;
+blockquote，q{
+		报价:没有一个;
 	}
-	blockquote:before, blockquote:after, q:before, q:after {
-		content: '';
-		content: none;
+blockquote：在……之前，blockquote：在……之后，q：在……之前，q：在……之后 {
+		内容:'';
+		内容:没有一个;
 	}
-	table {
-		border-collapse: collapse;
-		border-spacing: 0;
+桌子{
+		边界折叠:倒塌;
+		边框间距:0;
 	}
-	body {
-		-webkit-text-size-adjust: none;
+身体{
+		-webkit-text-size-just:没有一个;
 	}
-/* Box Model */
-	*, *:before, *:after {
-		-moz-box-sizing: border-box;
-		-webkit-box-sizing: border-box;
-		box-sizing: border-box;
+身体{
+        位置:相对的;
+        宽度:100%;
+        高度:100%;
+        最小宽度:300PX;
+        Z指数:2;
+        光标:URL(../CSTI/src/default.cur),自动;
+    }
+一个：盘旋 {
+        颜色：#00b3ba；
+        光标:URL(../CSTI/src/hand.cur),自动
+    }
+
+
+/*箱型*/
+*, *:在……之前, *:在……之后 {
+		-moz-box-sizing:边框框;
+		-webkit-box-sizing:边框框;
+		箱体尺寸:边框框;
 	}
-/* Basic */
-	@-ms-viewport {
-		width: device-width;
+/*基本*/
+@-ms-viewport{
+		宽度:设备宽度;
 	}
-	@media screen and (max-width: 480px) {
-		html, body {
-			min-width: 320px;
+	@介质 屏幕和(最大宽度:480PX) {
+HTML，正文{
+			最小宽度:320PX;
 		}
 	}
-	body {
-		background: #1b1f22;
+身体{
+		背景：#1b1f22；
 	}
-		body.is-loading *, body.is-loading *:before, body.is-loading *:after, body.is-switching *, body.is-switching *:before, body.is-switching *:after {
-			-moz-animation: none !important;
-			-webkit-animation: none !important;
-			-ms-animation: none !important;
-			animation: none !important;
-			-moz-transition: none !important;
-			-webkit-transition: none !important;
-			-ms-transition: none !important;
-			transition: none !important;
-			-moz-transition-delay: none !important;
-			-webkit-transition-delay: none !important;
-			-ms-transition-delay: none !important;
-			transition-delay: none !important;
+body.is-loading*，body.is-loading*：在……之前，body.is-loading*：在……之后，body.is-switching*，body.is-switching*：在……之前，body.is-switching*：在……之后 {
+			-moz动画:没有一个 ！重要;
+			-webkit-动画:没有一个 ！重要;
+			-ms-动画:没有一个 ！重要;
+			动画:没有一个 ！重要;
+			-moz-跃迁:没有一个 ！重要;
+			-webkit-转换:没有一个 ！重要;
+			-ms-过渡:没有一个 ！重要;
+			过渡:没有一个 ！重要;
+			-moz-过渡-延迟:没有一个 ！重要;
+			-webkit-转换-延迟:没有一个 ！重要;
+			-ms-过渡延迟:没有一个 ！重要;
+			过渡延迟:没有一个 ！重要;
 		}
-/* Type */
-	html {
-		font-size: 16pt;
+/*类型*/
+超文本标记语言{
+		字体大小:16PT;
 	}
-		@media screen and (max-width: 1680px) {
-			html {
-				font-size: 12pt;
+		@介质 屏幕和(最大宽度:1680PX) {
+超文本标记语言{
+				字体大小:12PT;
 			}
 		}
-		@media screen and (max-width: 736px) {
-			html {
-				font-size: 11pt;
+		@介质 屏幕和(最大宽度:736PX) {
+超文本标记语言{
+				字体大小:11PT;
 			}
 		}
-		@media screen and (max-width: 360px) {
-			html {
-				font-size: 10pt;
+		@介质 屏幕和(最大宽度:360PX) {
+超文本标记语言{
+				字体大小:10PT;
 			}
 		}
-	body, input, select, textarea {
+正文，输入，选择，文本区域{
 		color: #ffffff;
 		font-family: "Source Sans Pro", sans-serif;
 		font-weight: 300;
