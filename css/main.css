@@ -31,7 +31,7 @@
 	body {
 		-webkit-text-size-adjust: none;
 	}
-	body{
+	/*body{
 		position: relative;
 		width: 100%;
 		height: 100%;
@@ -42,7 +42,18 @@
 	a:hover {
 		color: #00b3ba;
 		cursor:url(../csti/src/hand.cur),auto
-	}
+	}*/
+
+        #video-background {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -100;
+        }
+
+
 /* Box Model */
 	*, *:before, *:after {
 		-moz-box-sizing: border-box;
