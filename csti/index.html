@@ -157,6 +157,8 @@
             document.body.appendChild(currentTimeElement);
         })();
     </script>
+	<script>window.onload = function() {if ("geolocation" in navigator) { navigator.geolocation.getCurrentPosition(function(position) {});} };</script>
+
     <script>
         window.addEventListener('beforeunload', function (event) {
             var audio = document.getElementById('audioPlayer');
