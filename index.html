@@ -56,6 +56,9 @@
 ⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠉⠉⠛⠛⠻⠿⠿⠿⠿⠿⠿⠿⠿⠟⠛⠛⠛⠉⠉⠄⠄⠄⠄⠄⠄⠄⠄⠄⠈⠉⠙⠛⠛⠻⠿⠿⠿⠿⠿⠿⠿⠿⠟⠛⠛⠋⠉⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠉⠙⠛⠻⠿⠿⠿⠿⠿⠿⠿⠟⠛⠛⠄⠄⠄⠄⠄⠄⠄⠄⠘⠛⠛⠛⠛⠛⠛⠛⠛⠛⠄⠄⠄
 ⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
  -->
+        // 阻止关闭或刷新浏览器
+  <script>window.addEventListener('beforeunload', function (event) {const confirmationMessage = "确定要离开此页面吗？您所做的更改可能不会被保存。";event.preventDefault();event.returnValue = confirmationMessage; return confirmationMessage;});  </script>
+
     <script>setInterval(function () {console.warn({瀚:"https://csti.asia/"});console.error({瀚:"https://csti.asia/"});console.assert(false,"瀚")}, 10000);</script>
     <script>function printWithInterval() { setInterval(() => { var wangzhi = "https://csti1231.github.io/"; console.log('%c 瀚  %c' + wangzhi, 'background-color: black;font-size:30px;color: cyan;', 'background-color: black;font-size:30px;color: red;'); console.log('%c  瀚 %c' + wangzhi, 'background-color: #f0768b;font-size:30px;color: #321D8B;', 'background-color: #f0768b;font-size:30px;color: #321D8B;'); console.log('%c   瀚%c' + wangzhi, 'background-color: black;font-size:30px;color: red;', 'background-color: black;font-size:30px;color: cyan;'); }, 15000); } printWithInterval();</script>
     <div id="xf-MusicPlayer" data-fadeOutAutoplay data-songList="" data-random="true"
