@@ -72,7 +72,24 @@
 
     <!--     <script>setInterval(function () {console.warn({瀚:"https://csti.asia/"});console.error({瀚:"https://csti.asia/"});console.assert(false,"瀚")}, 10000);</script> -->
     <!--     <script>function printWithInterval() { setInterval(() => { var wangzhi = "https://csti1231.github.io/"; console.log('%c 瀚  %c' + wangzhi, 'background-color: black;font-size:30px;color: cyan;', 'background-color: black;font-size:30px;color: red;'); console.log('%c  瀚 %c' + wangzhi, 'background-color: #f0768b;font-size:30px;color: #321D8B;', 'background-color: #f0768b;font-size:30px;color: #321D8B;'); console.log('%c   瀚%c' + wangzhi, 'background-color: black;font-size:30px;color: red;', 'background-color: black;font-size:30px;color: cyan;'); }, 10000); } printWithInterval();</script> -->
-
+    
+    <script>
+        //确保每年只在4月4日和12月13日这两个日期执行灰度效果
+        !function moairi() {
+            function moai() {document.body.style.filter = 'grayscale(100%)';}
+            const time = new Date();
+            const yue4 = 4; // 4代表4月
+            const ri4 = 4; // 4代表4号
+            const yue12 = 12; // 12代表12月
+            const ri13 = 13; // 13代表13号
+            if (time.getMonth() + 1 === yue4 && time.getDate() === ri4) {
+                moai();
+            } else if (time.getMonth() + 1 === yue12 && time.getDate() === ri13) {
+                moai();
+            }
+        }();
+    </script>
+    
     <div id="xf-MusicPlayer" data-fadeOutAutoplay data-songList="5012674904" data-random="false" data-themeColor="xf-girlPink"></div>
     <script src="./xf-MusicPlayer/js/xf-MusicPlayer.min.js"></script>
 
