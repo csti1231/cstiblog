@@ -41,6 +41,8 @@ html{
 		min-width: 300px;
 		z-index: 2;
 		cursor:url(../csti/src/default.cur), auto;
+		 display: flex;
+                justify-content: center;
 	}
 	a:hover {
 		color: #00b3ba;
@@ -57,7 +59,9 @@ html{
 /* 		背景模糊 */
 /* 	filter: blur(5px); */
         }
-
+#Outermostlayer{
+		width: 80%;
+}
 
 /* Box Model */
 	*, *:before, *:after {
