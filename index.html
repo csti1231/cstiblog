@@ -69,25 +69,18 @@
     
     <script>
         //确保每年只在4月4日和12月13日这两个日期执行灰度效果
-        !function moairi() {
-            function moai() {document.body.style.filter = 'grayscale(100%)';}
-            const time = new Date();
-            const yue4 = 4; // 4代表4月
-            const ri4 = 4; // 4代表4号
-            // 
-            const yue9 = 9; // 9代表9月
-            const ri18 = 18; // 18代表18号
-            // 
-            const yue12 = 12; // 12代表12月
-            const ri13 = 13; // 13代表13号
-            if (time.getMonth() + 1 === yue4 && time.getDate() === ri4) {
-                moai();
-            } else if (time.getMonth() + 1 === yue12 && time.getDate() === ri13) {
-                moai();
-            }else if (time.getMonth() + 1 === yue9 && time.getDate() === ri18) {
-                moai();
-            }
-        }();
+    (function() {
+        function applyGrayscale() { document.body.style.filter = 'grayscale(100%)'; }
+        const date = new Date();
+        const specialDates = [
+            { month: 4, day: 4 },   // 4月4日
+            { month: 12, day: 13 }, // 12月13日
+            { month: 9, day: 18 }   // 9月18日
+        ];
+        if (specialDates.some(d => date.getMonth() + 1 === d.month && date.getDate() === d.day)) {
+            applyGrayscale();
+        }
+    })();
     </script>
     
     <div id="xf-MusicPlayer" data-fadeOutAutoplay data-songList="5012674904" data-random="false" data-themeColor="xf-girlPink"></div>
