@@ -74,11 +74,17 @@
             const time = new Date();
             const yue4 = 4; // 4代表4月
             const ri4 = 4; // 4代表4号
+            // 
+            const yue9 = 9; // 9代表9月
+            const ri18 = 18; // 18代表18号
+            // 
             const yue12 = 12; // 12代表12月
             const ri13 = 13; // 13代表13号
             if (time.getMonth() + 1 === yue4 && time.getDate() === ri4) {
                 moai();
             } else if (time.getMonth() + 1 === yue12 && time.getDate() === ri13) {
+                moai();
+            }else if (time.getMonth() + 1 === yue9 && time.getDate() === ri18) {
                 moai();
             }
         }();
