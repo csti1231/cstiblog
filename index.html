@@ -303,7 +303,8 @@
         else if (19 < time && time <= 21) msg = "晚上好，今天过得怎么样？";
         else msg = "已经这么晚了呀，早点休息吧，晚安~";
 
-        fetch('https://ipapi.co/json/').then(response => response.json()).then(data => {
+        // 将 API 更改为 ipinfo.io
+        fetch('https://ipinfo.io/json').then(response => response.json()).then(data => {
             var ip = data.ip;
             $.ajax({
                 type: "get",
@@ -312,7 +313,7 @@
                 async: true,
                 success: function (userData) {
                     layer.msg("Hi~ 来自" + userData.data.location + '<br/>从' + msgTitle + '来的朋友！<br/>使用 ' + userData.data.os + "<br/>" + userData.data.browser + ' 访问本站！' + '<br/>' + msg + '<br/>您的IP地址是：' + ip, {
-                        shade: [0.1, '#000000'], // 设置透明度和背景颜色
+                        shade: [0.1, '#000'], // 设置透明度和背景颜色
                         time: 3000 // 显示时间
                     });
                 }
