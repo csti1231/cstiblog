@@ -6,8 +6,6 @@
 
 ## 预览
 
-[HeoMusic - 用音乐感染人心](https://88lin.github.io/Music/index.html)
-
 ## 基本操作
 
 `Space空格键`：暂停/播放音乐
